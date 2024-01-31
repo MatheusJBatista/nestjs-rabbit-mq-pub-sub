@@ -1,4 +1,7 @@
 import { Module } from '@nestjs/common'
+import { GenerateScheduleController } from './controllers/generate-schedule.controller'
 
-@Module({})
+@Module({
+  controllers: [GenerateScheduleController],
+})
 export class SubscriberModule {}

@@ -17,9 +17,6 @@ export const GENERATE_SCHEDULING_SERVICE_NAME = 'RMQ_PUBLISHER'
         options: {
           urls: ['amqps://{username}:{password}@{host}:{port}'],
           queue: 'generate-scheduling',
-          queueOptions: {
-            autoDelete: true,
-          },
         },
       },
     ]),

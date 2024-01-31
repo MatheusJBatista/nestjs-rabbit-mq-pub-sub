@@ -6,10 +6,8 @@ export class SendMessageUseCase {
   constructor(private generateSchedulingQueue: GenerateSchedulingQueue) {}
 
   async execute(message: string) {
-    const sendResponse = this.generateSchedulingQueue.client
+    this.generateSchedulingQueue.client
       .send('generate-scheduling', message)
       .subscribe()
-
-    console.log(sendResponse)
   }
 }
